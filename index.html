@@ -188,6 +188,20 @@
     color:var(--sub);font-size:12px;letter-spacing:0.05em;
     border-top:1px solid var(--line);
   }
+
+  /* Side Project */
+  .side-lead{
+    text-align:center;color:var(--sub);font-size:15px;
+    max-width:560px;margin:0 auto 48px;
+  }
+  .side-project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:24px;
+  }
+  .side-project-grid img{
+    width:100%;display:block;border:1px solid var(--line);border-radius:2px;
+  }
 </style>
 </head>
 <body>
@@ -313,6 +327,20 @@
     </div>
     <p>ご依頼・ご相談は下記メールアドレスまでお気軽にご連絡ください。料金はご予算・内容に応じてお見積りいたします。</p>
     <a class="email" href="mailto:rafael.shimizu1998@gmail.com">rafael.shimizu1998@gmail.com</a>
+  </div>
+</section>
+
+<section id="side-project">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="num">05 / Side Project</div>
+      <h2>息抜きにゲームも作ってます</h2>
+    </div>
+    <p class="side-lead">実は動画編集の合間に、趣味で新作ゲームの設計にも手を出しています。需要があるかは謎ですが、遊びでこんなこともしてますよははは。</p>
+    <div class="side-project-grid">
+      <img src="game-screenshot-01.jpg" alt="制作中のゲーム画面">
+      <img src="game-screenshot-02.jpg" alt="Unityでの制作風景">
+    </div>
   </div>
 </section>
 
