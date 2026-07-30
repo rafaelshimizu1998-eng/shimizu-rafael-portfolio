@@ -189,6 +189,22 @@
     border-top:1px solid var(--line);
   }
 
+  /* BGM toggle */
+  .bgm-toggle{
+    position:fixed;right:20px;bottom:20px;z-index:100;
+    width:48px;height:48px;border-radius:50%;
+    background:#fff;border:1px solid var(--line);
+    box-shadow:0 4px 14px rgba(0,0,0,0.12);
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;transition:transform .2s,box-shadow .2s;
+  }
+  .bgm-toggle:hover{transform:scale(1.06);box-shadow:0 6px 18px rgba(0,0,0,0.18);}
+  .bgm-toggle svg{width:20px;height:20px;fill:none;stroke:var(--ink);stroke-width:1.8;}
+  .bgm-toggle .icon-muted{display:block;}
+  .bgm-toggle .icon-playing{display:none;}
+  .bgm-toggle.is-playing .icon-muted{display:none;}
+  .bgm-toggle.is-playing .icon-playing{display:block;}
+
   /* Side Project */
   .side-lead{
     text-align:center;color:var(--sub);font-size:15px;
@@ -348,6 +364,38 @@
 <footer>
   &copy; 2026 Rafael Shimizu. All rights reserved.
 </footer>
+
+<audio id="bgm" src="bgm.mp3" loop preload="auto" playsinline></audio>
+<button id="bgmToggle" class="bgm-toggle" type="button" aria-label="BGMを再生/停止">
+  <svg class="icon-muted" viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4z"/><line x1="16" y1="9" x2="21" y2="14"/><line x1="21" y1="9" x2="16" y2="14"/></svg>
+  <svg class="icon-playing" viewBox="0 0 24 24"><path d="M4 9v6h4l5 5V4L8 9H4z"/><path d="M16 8.5a5 5 0 0 1 0 7"/><path d="M18.5 6a8.5 8.5 0 0 1 0 12"/></svg>
+</button>
+
+<script>
+  (function(){
+    var audio = document.getElementById('bgm');
+    var toggle = document.getElementById('bgmToggle');
+    audio.volume = 0.5;
+
+    function tryAutoplayMuted(){
+      audio.muted = true;
+      var p = audio.play();
+      if (p && p.catch) { p.catch(function(){}); }
+    }
+    tryAutoplayMuted();
+
+    toggle.addEventListener('click', function(){
+      if (audio.paused || audio.muted) {
+        audio.muted = false;
+        audio.play().catch(function(){});
+        toggle.classList.add('is-playing');
+      } else {
+        audio.pause();
+        toggle.classList.remove('is-playing');
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>
