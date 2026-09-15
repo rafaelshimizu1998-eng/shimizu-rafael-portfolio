@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shimizu Rafael | Video Editor Portfolio</title>
+<title>Hiroshima Frame Studio | Shimizu Rafael Portfolio</title>
 <style>
   :root{
     --bg:#ffffff;
@@ -11,6 +11,7 @@
     --sub:#6b6b6b;
     --line:#e8e8e8;
     --accent:#111111;
+    --brand:#b8391d;
     --max:1080px;
   }
   *{box-sizing:border-box;}
@@ -37,8 +38,10 @@
     display:flex;align-items:center;justify-content:space-between;
     height:72px;
   }
-  .logo{font-size:15px;letter-spacing:0.08em;font-weight:600;}
+  .logo{font-size:15px;letter-spacing:0.08em;font-weight:600;display:flex;align-items:center;gap:10px;}
   .logo span{color:var(--sub);font-weight:400;}
+  .logo .brand-frame{color:var(--brand);}
+  .logo-mark{width:22px;height:22px;flex-shrink:0;}
   nav{display:flex;gap:32px;font-size:13px;letter-spacing:0.05em;}
   nav a{color:var(--sub);transition:color .2s;}
   nav a:hover{color:var(--ink);}
@@ -104,7 +107,7 @@
     gap:60px;
     align-items:start;
   }
-  .about-photo{
+  .about-photm{
     width:200px;height:200px;border-radius:50%;
     overflow:hidden;flex-shrink:0;
     background:#eee;
@@ -168,9 +171,13 @@
   .play-btn svg{width:18px;height:18px;margin-left:3px;fill:#111;}
   .work-item:hover .play-btn{transform:translate(-50%,-50%) scale(1.08);background:#fff;}
   .work-label{
-    padding:16px 18px;
-    font-size:13px;color:var(--sub);
-    letter-spacing:0.03em;
+    padding:18px 20px 22px;
+  }
+  .work-label .work-title{
+    font-size:14px;font-weight:600;color:var(--ink);letter-spacing:0.02em;margin-bottom:6px;
+  }
+  .work-label .work-desc{
+    font-size:13px;color:var(--sub);line-height:1.7;
   }
 
   /* Contact */
@@ -224,11 +231,26 @@
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">RAFAEL SHIMIZU <span>/ Video Editor</span></a>
+    <a class="logo" href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+      <svg class="logo-mark" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+        <g stroke="#1a1a1a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16,42 L16,16 L42,16"/>
+          <path d="M78,16 L104,16 L104,42"/>
+          <path d="M16,78 L16,104 L42,104"/>
+          <path d="M104,78 L104,104 L78,104"/>
+        </g>
+        <g stroke="#b8391d" stroke-width="7" stroke-linecap="round">
+          <path d="M34,46 L86,46"/>
+          <path d="M34,60 L86,60"/>
+          <path d="M34,74 L86,74"/>
+        </g>
+      </svg>
+      HIROSHIMA <span class="brand-frame">FRAME</span> STUDIO <span>/ Rafael Shimizu</span>
+    </a>
     <nav>
       <a href="#about">About</a>
       <a href="#services">Service</a>
-      <a href="works.html">Works</a>
+      <a href="#works">Works</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -240,7 +262,7 @@
     <h1>伝わる映像を<br>丁寧に編集する</h1>
     <p>YouTube動画編集を中心に活動<br>視聴維持率とテンポを意識した編集で、伝えたいことをまっすぐ届ける</p>
     <div class="hero-cta">
-      <a href="works.html" class="btn primary">実績を見る</a>
+      <a href="#works" class="btn primary">実績を見る</a>
       <a href="#contact" class="btn ghost">お問い合わせ</a>
     </div>
   </div>
@@ -289,6 +311,11 @@
         <p>会社紹介やポートフォリオなど、目的に合わせてシンプルで見やすいWEBサイトを制作します。</p>
       </div>
       <div class="service-card">
+        <div class="icon">SNS運用</div>
+        <h3>Instagram・TikTok・YouTubeショート</h3>
+        <p>投稿の企画・動画編集・投稿代行まで、アカウントの世界観に合わせて一貫して運用をサポートします。</p>
+      </div>
+      <div class="service-card">
         <div class="icon">教育</div>
         <h3>動画編集者育成講座(宇都宮のみ)</h3>
         <p>動画編集未経験者・初心者向けに概ね2日間で案件獲得できるレベルまで教えます。要相談でその後の案件獲得等サポートも可能。</p>
@@ -312,25 +339,61 @@
           <img src="https://i.ytimg.com/vi/AJkiE1gpV-Q/hqdefault.jpg" alt="Work 01" loading="lazy">
           <span class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 21,12 5,21"></polygon></svg></span>
         </div>
-        <div class="work-label">Work 01</div>
+        <div class="work-label">
+          <div class="work-title">Work 01</div>
+          <div class="work-desc">仮)テンポ感を重視したカット編集と、視聴維持を意識したテロップ表現を取り入れた一本です。</div>
+        </div>
       </a>
       <a class="work-item" href="https://www.youtube.com/watch?v=qX2bFWbPvXg" target="_blank" rel="noopener">
         <div class="video-frame">
           <img src="https://i.ytimg.com/vi/qX2bFWbPvXg/hqdefault.jpg" alt="Work 02" loading="lazy">
           <span class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 21,12 5,21"></polygon></svg></span>
         </div>
-        <div class="work-label">Work 02</div>
+        <div class="work-label">
+          <div class="work-title">Work 02</div>
+          <div class="work-desc">仮)BGM・効果音を効果的に配置し、飽きさせないテンポで最後まで見せる編集を意識しました。</div>
+        </div>
       </a>
       <a class="work-item" href="https://www.youtube.com/watch?v=5BUsdgnRa9M" target="_blank" rel="noopener">
         <div class="video-frame">
           <img src="https://i.ytimg.com/vi/5BUsdgnRa9M/hqdefault.jpg" alt="Work 03" loading="lazy">
           <span class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 21,12 5,21"></polygon></svg></span>
         </div>
-        <div class="work-label">Work 03</div>
+        <div class="work-label">
+          <div class="work-title">Work 03</div>
+          <div class="work-desc">仮)不要な間を削ぎ落とすカット編集で、テンポよく気持ちよく見られる仕上がりを目指しました。</div>
+        </div>
       </a>
-    </div>
-    <div style="text-align:center;margin-top:48px;">
-      <a href="works.html" class="btn primary">実績一覧を見る</a>
+      <a class="work-item" href="https://www.youtube.com/watch?v=rggyjGVmQsE" target="_blank" rel="noopener">
+        <div class="video-frame">
+          <img src="https://i.ytimg.com/vi/rggyjGVmQsE/hqdefault.jpg" alt="Work 04" loading="lazy">
+          <span class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 21,12 5,21"></polygon></svg></span>
+        </div>
+        <div class="work-label">
+          <div class="work-title">Work 04</div>
+          <div class="work-desc">仮)チャンネルの世界観に合わせたテロップデザインと色味の調整にこだわった一本です。</div>
+        </div>
+      </a>
+      <a class="work-item" href="https://www.youtube.com/watch?v=zicJ5ZlQDdE" target="_blank" rel="noopener">
+        <div class="video-frame">
+          <img src="https://i.ytimg.com/vi/zicJ5ZlQDdE/hqdefault.jpg" alt="Work 05" loading="lazy">
+          <span class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 21,12 5,21"></polygon></svg></span>
+        </div>
+        <div class="work-label">
+          <div class="work-title">Work 05</div>
+          <div class="work-desc">仮)情報量の多い内容を整理し、視聴者が迷わず理解できる構成・編集を心がけました。</div>
+        </div>
+      </a>
+      <a class="work-item" href="https://www.youtube.com/watch?v=S50Z2pMiUkQ" target="_blank" rel="noopener">
+        <div class="video-frame">
+          <img src="https://i.ytimg.com/vi/S50Z2pMiUkQ/hqdefault.jpg" alt="Work 06" loading="lazy">
+          <span class="play-btn"><svg viewBox="0 0 24 24"><polygon points="5,3 21,12 5,21"></polygon></svg></span>
+        </div>
+        <div class="work-label">
+          <div class="work-title">Work 06</div>
+          <div class="work-desc">仮)冒頭数秒での惹きつけを意識した構成で、離脱を防ぐ編集を行いました。</div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -350,11 +413,11 @@
   <div class="wrap">
     <div class="section-head">
       <div class="num">05 / Side Project</div>
-      <h2>息抜きにゲームも作ってます</h2>
+      <h2>息抜きにゲーユも作ってます</h2>
     </div>
-    <p class="side-lead">実は動画編集の合間に、趣味で新作ゲームの設計にも手を出しています。<br>需要があるかは謎ですが、遊びでこんなこともしてますよははは。</p>
+    <p class="side-lead">実は動画編集の合間に、趣味で新作ゲーユの設計にも手を出しています。<br>需要があるかは謎ですが、遊びでこんなこともしてますよははは。</p>
     <div class="side-project-grid">
-      <img src="game-screenshot-01.jpg" alt="制作中のゲーム画面">
+      <img src="game-screenshot-01.jpg" alt="制作中のゲーユ画面">
       <img src="game-screenshot-02.jpg" alt="Unityでの制作風景">
     </div>
     <p style="text-align:center;color:var(--sub);font-size:12px;margin-top:16px;">※画像はイメージです笑</p>
@@ -362,7 +425,7 @@
 </section>
 
 <footer>
-  &copy; 2026 Rafael Shimizu. All rights reserved.
+  &copy; 2026 Hiroshima Frame Studio (Rafael Shimizu). All rights reserved.
 </footer>
 
 <audio id="bgm" src="bgm.mp3" loop preload="auto" playsinline></audio>
