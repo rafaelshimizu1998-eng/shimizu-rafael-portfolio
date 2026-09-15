@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>サービス詳細 | Shimizu Rafael Video Editor Portfolio</title>
+<title>サービス詳細 | Hiroshima Frame Studio</title>
 <style>
   :root{
     --bg:#ffffff;
@@ -11,6 +11,7 @@
     --sub:#6b6b6b;
     --line:#e8e8e8;
     --accent:#111111;
+    --brand:#b8391d;
     --max:1080px;
   }
   *{box-sizing:border-box;}
@@ -36,8 +37,10 @@
     display:flex;align-items:center;justify-content:space-between;
     height:72px;
   }
-  .logo{font-size:15px;letter-spacing:0.08em;font-weight:600;}
+  .logo{font-size:15px;letter-spacing:0.08em;font-weight:600;display:flex;align-items:center;gap:10px;}
   .logo span{color:var(--sub);font-weight:400;}
+  .logo .brand-frame{color:var(--brand);}
+  .logo-mark{width:22px;height:22px;flex-shrink:0;}
   nav{display:flex;gap:32px;font-size:13px;letter-spacing:0.05em;}
   nav a{color:var(--sub);transition:color .2s;}
   nav a:hover{color:var(--ink);}
@@ -162,11 +165,26 @@
 
 <header>
   <div class="wrap">
-    <a class="logo" href="index.html">RAFAEL SHIMIZU <span>/ Video Editor</span></a>
+    <a class="logo" href="index.html">
+      <svg class="logo-mark" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+        <g stroke="#1a1a1a" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M16,42 L16,16 L42,16"/>
+          <path d="M78,16 L104,16 L104,42"/>
+          <path d="M16,78 L16,104 L42,104"/>
+          <path d="M104,78 L104,104 L78,104"/>
+        </g>
+        <g stroke="#b8391d" stroke-width="7" stroke-linecap="round">
+          <path d="M34,46 L86,46"/>
+          <path d="M34,60 L86,60"/>
+          <path d="M34,74 L86,74"/>
+        </g>
+      </svg>
+      HIROSHIMA <span class="brand-frame">FRAME</span> STUDIO <span>/ Rafael Shimizu</span>
+    </a>
     <nav>
       <a href="index.html#about">About</a>
       <a href="services.html" class="active">Service</a>
-      <a href="works.html">Works</a>
+      <a href="index.html#works">Works</a>
       <a href="index.html#contact">Contact</a>
     </nav>
   </div>
@@ -349,6 +367,56 @@
       </div>
     </div>
 
+    <div class="service-detail">
+      <div class="tag">04 / SNS運用</div>
+      <h3>Instagram・TikTok・YouTubeショート運用</h3>
+      <p class="intro">アカウントの世界観に合わせた投稿企画から、動画編集・投稿代行、簡単な分析レポートまで一貫してサポートします。</p>
+
+      <h4 class="subhead">料金プラン(目安)</h4>
+      <div class="plans">
+        <div class="plan-card">
+          <div class="plan-name">投稿代行プラン</div>
+          <div class="plan-price">¥15,000<span>〜 / 月</span></div>
+          <div class="plan-desc">月4〜8投稿。素材をいただき、編集・投稿のみ代行します。</div>
+        </div>
+        <div class="plan-card">
+          <div class="plan-name">企画+編集プラン</div>
+          <div class="plan-price">¥35,000<span>〜 / 月</span></div>
+          <div class="plan-desc">投稿企画の立案から動画編集・投稿・簡単な分析レポートまで対応。</div>
+        </div>
+        <div class="plan-card">
+          <div class="plan-name">フル運用プラン</div>
+          <div class="plan-price">要相談</div>
+          <div class="plan-desc">撮影・企画・編集・投稿・分析まで一括で任せたい方向け。</div>
+        </div>
+      </div>
+      <p class="note">※ 投稿頻度・プラットフォーム数・撮影の有無により変動します。まずは現状のアカウントとご予算をお聞かせください。</p>
+
+      <h4 class="subhead" style="margin-top:48px;">運用の流れ</h4>
+      <div class="flow">
+        <div class="flow-step">
+          <div class="step-num">STEP 01</div>
+          <div class="step-title">ヒアリング</div>
+          <div class="step-desc">アカウントの目的・ターゲット・世界観をお伺いします。</div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">STEP 02</div>
+          <div class="step-title">投稿企画</div>
+          <div class="step-desc">月ごとの投稿企画・構成案を作成します。</div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">STEP 03</div>
+          <div class="step-title">編集・投稿</div>
+          <div class="step-desc">動画・画像を編集し、スケジュールに沿って投稿します。</div>
+        </div>
+        <div class="flow-step">
+          <div class="step-num">STEP 04</div>
+          <div class="step-title">分析・改善</div>
+          <div class="step-desc">反応の良かった投稿を分析し、翌月の企画に反映します。</div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -364,7 +432,7 @@
 </section>
 
 <footer>
-  &copy; 2026 Rafael Shimizu. All rights reserved.
+  &copy; 2026 Hiroshima Frame Studio (Rafael Shimizu). All rights reserved.
 </footer>
 
 </body>
